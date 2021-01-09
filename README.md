@@ -1,9 +1,5 @@
 ## 1.	Árvore Geradora Mínima
 Dado um grafo não direcionado e ponderado, uma Árvore Geradora Mínima (Minimum Spanning Tree) é uma subárvore desse grafo que conecta todos os vértices e apresenta a menor soma dos pesos de todas as arestas possível, ou seja, é a árvore geradora do grafo com menor peso dentre todas as árvores geradoras possíveis onde o peso da árvore é a soma de todos os pesos de suas arestas.
-Na imagem abaixo encontram-se um grafo, não direcionado e com pesos, à esquerda e sua árvore geradora mínima correspondente à direita.
-
-
-
 
 
 ## 2.	Algoritmo de Kruskal
@@ -15,8 +11,10 @@ O algoritmo de Kruskal é um algoritmo guloso para encontrar a Árvore Geradora 
  
 
 ## 3.	Implementação do Algoritmo de Kruskal
-Para esse trabalho, o algoritmo de Kruskal foi implementado de duas formas diferentes, que serão melhor descritas abaixo, para a etapa de verificar se uma aresta pode entrar na árvore ou deve ser retirada. 
-Pois como essa etapa consiste em verificar se a árvore gerada pela adição da aresta permanece acíclica, há mais de uma maneira de fazer, sendo as atualizadas aqui a verificação por Union-Find e a verificação por uma Busca em Profundidade. 
+Para esse trabalho, o algoritmo de Kruskal foi implementado de duas formas diferentes, que serão melhor descritas abaixo, 
+para a etapa de verificar se uma aresta pode entrar na árvore ou deve ser retirada. 
+Pois como essa etapa consiste em verificar se a árvore gerada pela adição da aresta permanece acíclica, há mais de uma maneira de fazer, 
+sendo as atualizadas aqui a verificação por Union-Find e a verificação por uma Busca em Profundidade. 
 Contudo, a etapa de ordenar as arestas em ordem crescente de peso é a mesma para ambos os pesos, dada pelo método abaixo.
 
 ``` 
@@ -45,8 +43,11 @@ public static HashMap<Integer, Arestas> sortByValue(HashMap<Integer, Arestas> hm
 ```
 
 ### 3.1	Algoritmo de Kruskal utilizando Union-Find
-Com a utilização do Union-Find, a Árvore Geradora Mínima é dada por um processo de unificação onde em cada iteração pega-se uma aresta da lista de arestas ordenadas do grafo e aplica-se o método Find que verifica se as extremidades da aresta pertencem à subárvores diferentes (aresta não gerou um ciclo), se sim, essas subárvores são combinadas pelo método Union, e a aresta é adicionada à resposta. 
-Depois de iterar sobre todas as arestas, todos os vértices pertencerão à mesma subárvore e a Árvore Geradora Mínima será dada. Os métodos utilizados para essa implementação se encontram abaixo.
+Com a utilização do Union-Find, a Árvore Geradora Mínima é dada por um processo de unificação onde em cada iteração pega-se 
+uma aresta da lista de arestas ordenadas do grafo e aplica-se o método Find que verifica se as extremidades da aresta pertencem 
+à subárvores diferentes (aresta não gerou um ciclo), se sim, essas subárvores são combinadas pelo método Union, e a aresta é adicionada à resposta. 
+Depois de iterar sobre todas as arestas, todos os vértices pertencerão à mesma subárvore e a Árvore Geradora Mínima será dada. 
+Os métodos utilizados para essa implementação se encontram abaixo.
 
 ```
 int find(HashMap<Integer,subset> subsets, int i)
@@ -132,7 +133,9 @@ int find(HashMap<Integer,subset> subsets, int i)
 ```
 
 ### 3.2	Algoritmo de Kruskal utilizando Busca em Profundidade
-Com a utilização da Busca e Profundidade, a Árvore Geradora Mínima é dada por um processo de adição e remoção de arestas. Em cada iteração pega-se uma aresta da lista de arestas ordenadas do grafo e a adiciona à Árvore Geradora Mínima, verifica-se então se a Árvore permanece acíclica através de uma busca em profundidade na árvore, se sim, a aresta permanece, se não, é removida. 
+Com a utilização da Busca e Profundidade, a Árvore Geradora Mínima é dada por um processo de adição e remoção de arestas. 
+Em cada iteração pega-se uma aresta da lista de arestas ordenadas do grafo e a adiciona à Árvore Geradora Mínima, 
+verifica-se então se a Árvore permanece acíclica através de uma busca em profundidade na árvore, se sim, a aresta permanece, se não, é removida. 
 Abaixo é possivel observar a implementação para esse código.
 
 ```
