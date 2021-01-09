@@ -181,6 +181,66 @@ public void MST_Kruskal_DFS() {
         mst.print_MST(pesoSoma);
 
     }
+    
+    // Método para verificar se um grafo é acíclico por meio de uma busca em profundidade.
+    public boolean is_acyclic( ) {
+        DFS( null );
+        return acyclic;
+    }
+
+
+    // Método para realizar uma busca em profundidade em um grafo com a finalidade de identificar ciclo.
+    // A ideia é percorrer tod o grafo marcando os vértices visitados,
+    // Se visitar um mesmo vértice duas vezes, o grafo possui ciclos, sendo assim não acícliclo.
+    // Utiliza o método "DFS_visit" para as visitas
+    public void DFS( List<Vertex> ordering ) {
+
+        ArrayList <String> arestas_marcadas = new ArrayList<String>();//Armazenar as arestas já percorridas
+
+
+        if( ordering == null ) {
+            ordering = new ArrayList<Vertex>( );
+            ordering.addAll( vertex_set.values( ) );
+        }
+        for( Vertex v1 : vertex_set.values() )
+            v1.d = null;
+
+        acyclic = true;
+
+        for( Vertex v1 : ordering )
+            if( v1.d == null ) {
+                v1.d = 0; //Marca o vértice como visitado
+                DFS_visit(v1,arestas_marcadas);
+            }
+    }
+
+    // Método utilizado pela "DFS" para as visitas aos vizinhos de cada vértice ainda não visitado.
+    private void DFS_visit( Vertex v1, ArrayList <String> a_m ) {
+
+        // Caso queira ver as visitas realizadas na busca em cada iteração de kruskal, retirar o comentário abaixo
+        /*System.out.println("Visitando:" + v1.id);
+
+
+        for (Vertex v: v1.nbhood.values()){
+            System.out.println("vizinhos:" + v.id);
+        }*/
+
+        for( Vertex neig : v1.nbhood.values( ) ) {
+            if( neig.d == null ) {
+                a_m.add(Integer.toString(v1.id)+Integer.toString(neig.id));//Marca a aresta como percorrida
+                v1.d = 0; // Marca o vértice como visitado
+                DFS_visit( neig, a_m );
+            }
+            else if (!a_m.contains(Integer.toString(neig.id)+Integer.toString(v1.id)))
+                // Verica-se se a aresta neig-id foi percorrida;
+                // Pois se sim, neig ter sido visitado não implica em um ciclo
+                // Por exemplo, começa-se pelo vértice 1 que tem como vizinho o 2
+                //  Visita-se o 2 que tem como vizinho o 1, o 1 ter sido visitado
+                //  não implica no grafo ser ciclíco.
+                acyclic = false;
+        }
+    }
+
 ```
 
 
