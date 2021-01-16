@@ -36,7 +36,8 @@ Depois de iterar sobre todas as arestas, todos os vértices pertencerão à mesm
 ### 3.2	Algoritmo de Kruskal utilizando Busca em Profundidade
 Com a utilização da Busca e Profundidade, a Árvore Geradora Mínima é dada por um processo de adição e remoção de arestas. 
 Em cada iteração pega-se uma aresta da lista de arestas ordenadas do grafo e a adiciona à Árvore Geradora Mínima (que se ininica vazia), 
-verifica-se então se a Árvore permanece acíclica através de uma busca em profundidade na árvore, se sim, a aresta permanece, se não, é removida. 
+verifica-se então se a Árvore permanece acíclica através de uma busca em profundidade na árvore, se sim, a aresta permanece, se não, é removida.
+Se encontra comentado para que o programa não imprima o resultado duplicado, mas pode ser descomentado no método MST.
 
 ## 4 - Arquivos de entrada na pasta myfiles
 
