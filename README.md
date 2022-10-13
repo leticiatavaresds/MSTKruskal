@@ -77,7 +77,7 @@ Selecione o que deseja fazer:
  5 Árvore Geradora Mínima
  
 ```
-4. Deve-se selecionar a opção 1, informanco o nome do arquivo txt que contém o grafo que obrigatoriamente deve estar contido no diretório "ArqsEntrada". Ao selecionar a opção e informarmos o nome do arquivo, temos a seguinte resposta
+4. Deve-se selecionar a opção 1, informanco o nome do arquivo txt que contém o grafo que obrigatoriamente deve estar contido no diretório "ArqsEntrada". Ao selecionar a opção e informarmos o nome do arquivo, temos a seguinte resposta:
 
 ```
 1
@@ -131,6 +131,9 @@ Soma dos pesos das arestas da MST: 19
  
  
  ```
+ 
+ Por padrão, o método utilizado para encontrar a árvore geradora mínima é o union-find, caso o usuário deseje gerar através de uma busca de profundidade, deve-se descomentar a chamada do método 'subjacente.MST_Kruskal_DFS()' no arquivo "Graph.java".
+ 
  [⬆ Voltar ao topo](#algoritmo-de-kruskal-em-java)<br>
  
  ## Arquivos de entrada 
