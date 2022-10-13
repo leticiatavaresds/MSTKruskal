@@ -15,6 +15,7 @@
   - [Implementação por Union-Find](#implementação-por-union-find)
   - [Implementação por Busca em Profundidade](#implementação-por-busca-em-profundidade)
 - [Arquivos de Entrada](#arquivos-de-entrada)
+- [Licença](#licença)
 
 # Introdução
 
@@ -28,7 +29,7 @@ O algoritmo de Kruskal é um algoritmo guloso para encontrar a Árvore Geradora 
 3.	Pega-se a aresta com o menor peso e a adiciona à Árvore Geradora. Se ao ser adicionada, a aresta gerar um ciclo, rejeita-se essa aresta.
 4.	Continua-se adicionando as arestas em ordem crescente de peso até que todos os vértices sejam alcançados.
  
-
+[⬆ Voltar ao topo](#algoritmo-de-kruskal-em-java)<br>
 #	Implementação do Algoritmo de Kruskal
 Para esse trabalho, o algoritmo de Kruskal foi implementado de duas formas diferentes, que serão melhor descritas abaixo, 
 para a etapa de verificar se uma aresta será adicionada à árvore ou não. 
@@ -56,6 +57,7 @@ Em cada iteração pega-se uma aresta da lista de arestas ordenadas do grafo e a
 verifica-se então se a Árvore permanece acíclica através de uma busca em profundidade na árvore, se sim, a aresta permanece, se não, é removida.
 Se encontra comentado para que o programa não imprima o resultado duplicado, mas pode ser descomentado no método MST.
 
+[⬆ Voltar ao topo](#algoritmo-de-kruskal-em-java)<br>
 ## Arquivos de entrada 
 
 Os seguintes exemplos se encontram na pasta [myfiles](https://github.com/leticiatavaresds/MSTKruskal/tree/master/myfiles):
@@ -74,5 +76,11 @@ Os seguintes exemplos se encontram na pasta [myfiles](https://github.com/leticia
 | gdesconexo.txt   | Grafo não diecionado e não conexo.                                                                                                                      | Informa que o grafo não é conexo e não é possível encontrar a árvore geradora mínima.                              |
 | glaço.txt        | Grafo não direcionado e conexo que apresenta laço.                                                                                                      | Impressão do grafo subjacente correspondente e de sua árvore geradora mínima.                                                  |
 | gnormal.txt      | Grafo não diecionado, conexo, sem laços e sem arestas paralelas.                                                                                             | Impressão do grafo subjacente correspondente e de sua árvore geradora mínima.                                                  |
+
+[⬆ Voltar ao topo](#algoritmo-de-kruskal-em-java)<br>
+
+# Licença
+
+The MIT License (MIT) 2022 - Letícia Tavares. Leia o arquivo [LICENSE.md](https://github.com/leticiatavaresds/MSTKruskal/blob/master/LICENSE.md) para mais detalhes.
 
 [⬆ Voltar ao topo](#algoritmo-de-kruskal-em-java)<br>
