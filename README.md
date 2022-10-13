@@ -158,8 +158,6 @@ Os seguintes exemplos se encontram na pasta [ArqsEntrada](https://github.com/let
 
 [⬆ Voltar ao topo](#algoritmo-de-kruskal-em-java)<br>
 
-![image](https://user-images.githubusercontent.com/34246743/195705451-9565fa42-c176-4a9d-9444-71876ff9172a.png)
-
 
 # Licença
 
