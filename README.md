@@ -58,9 +58,83 @@ verifica-se então se a Árvore permanece acíclica através de uma busca em pro
 Se encontra comentado para que o programa não imprima o resultado duplicado, mas pode ser descomentado no método MST.
 
 [⬆ Voltar ao topo](#algoritmo-de-kruskal-em-java)<br>
-## Arquivos de entrada 
 
-Os seguintes exemplos se encontram na pasta [myfiles](https://github.com/leticiatavaresds/MSTKruskal/tree/master/myfiles):
+# Execução 
+
+
+1. Instale Java (preferencialmente a versão mais recente)
+2. Faça o download da pasta do projeto ou clone o repositório.
+3. Execute o projeto "src". Ao executar, a seguinte saída será impressa:
+
+```
+Selecione o que deseja fazer:   
+ 0 Sair 
+ 1 Entrada por arquivo de texto
+ 2 Print do Grafo
+ 3 Escrever em Arquivo
+ 4 Excluir vértice
+ 5 Árvore Geradora Mínima
+ 
+```
+4. Deve-se selecionar a opção 1, informanco o nome do arquivo txt que contém o grafo que obrigatoriamente deve estar contido no diretório "ArqsEntrada". Ao selecionar a opção e informarmos o nome do arquivo, temos a seguinte resposta
+
+```
+1
+
+Informe o nome do arquivo txt sem escrever a extensão (arquivo deve estar na pasta ArqsEntrada):
+dnormal2
+
+Arquivo lido com sucesso. O que deseja fazer agora?
+
+ 0 Sair
+ 1 Entrada por arquivo de texto
+ 2 Print do Grafo
+ 3 Escrever em Arquivo
+ 4 Excluir vértice
+ 5 Árvore Geradora Mínima
+```
+5. Se o arquivo foi lido com sucesso, basta então selecionar a opçào 5 que o programa irá avaliar o grafo dado e tentará gerar sua Árvore Geradora Mínima. No exemplo de execução abaixo, o programa informa que o grafo dado é direcionado, dessa forma, para gerar sua Árvore Geradora Mínima, obtém-se primeiramente seu Grafo Subjacente.
+```
+
+ O Grafo é direcionado. Para encontrar a Árvore Geradora Mínima foi obtido o seguinte Grafo Subjacente: 
+----------------------------------------------------
+***************** Grafo Subjacente *****************
+----------------------------------------------------
+
+Id do vértice: 0, Vizinhança:  1 peso:10 2 peso:6 3 peso:5
+Id do vértice: 1, Vizinhança:  0 peso:10 3 peso:15
+Id do vértice: 2, Vizinhança:  0 peso:6 3 peso:4
+Id do vértice: 3, Vizinhança:  0 peso:5 1 peso:15 2 peso:4
+
+ Grafo, grau máximo 3
+----------------------------------------------------
+
+
+-------------------------------------------------------
+**************** Árvore Geradora Mínima ***************
+-------------------------------------------------------
+
+Id do vértice: 0, Vizinhança:  1 peso:10 3 peso:5
+Id do vértice: 1, Vizinhança:  0 peso:10
+Id do vértice: 2, Vizinhança:  3 peso:4
+Id do vértice: 3, Vizinhança:  0 peso:5 2 peso:4
+
+Grau máximo da MST: 2
+Soma dos pesos das arestas da MST: 19
+
+----------------------------------------------------
+ Deseja fazer mais alguma coisa?
+
+ 1 - Sim
+ 0 - Não, Sair.
+ 
+ 
+ ```
+ 
+ ## Arquivos de entrada 
+
+Os seguintes exemplos se encontram na pasta [ArqsEntrada](https://github.com/leticiatavaresds/MSTKruskal/tree/master/src/ArqsEntrada):
+
 
 | Nome Arquivo | Descrição                                                                                                                                               | Saída                                                                                                                               |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
@@ -78,6 +152,9 @@ Os seguintes exemplos se encontram na pasta [myfiles](https://github.com/leticia
 | gnormal.txt      | Grafo não diecionado, conexo, sem laços e sem arestas paralelas.                                                                                             | Impressão do grafo subjacente correspondente e de sua árvore geradora mínima.                                                  |
 
 [⬆ Voltar ao topo](#algoritmo-de-kruskal-em-java)<br>
+
+![image](https://user-images.githubusercontent.com/34246743/195705451-9565fa42-c176-4a9d-9444-71876ff9172a.png)
+
 
 # Licença
 
