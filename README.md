@@ -14,6 +14,7 @@
 - [Implementação do Algoritmo de Kruskal](#implementação-do-algoritmo-de-kruskal)
   - [Implementação por Union-Find](#implementação-por-union-find)
   - [Implementação por Busca em Profundidade](#implementação-por-busca-em-profundidade)
+- [Execução](#execução)
 - [Arquivos de Entrada](#arquivos-de-entrada)
 - [Licença](#licença)
 
@@ -130,6 +131,7 @@ Soma dos pesos das arestas da MST: 19
  
  
  ```
+ [⬆ Voltar ao topo](#algoritmo-de-kruskal-em-java)<br>
  
  ## Arquivos de entrada 
 
